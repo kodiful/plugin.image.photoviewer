@@ -92,6 +92,7 @@ if __name__ == '__main__':
                 if has_latlong:
                     contextmenu.append((Common.STR(30014), 'RunPlugin(%s?%s)' % (sys.argv[0], urlencode({'action': 'show_map', 'uuid': uuid, 'lat': lat, 'long': long}))))
                     contextmenu.append((Common.STR(30011), 'Container.Update(%s?%s)' % (sys.argv[0], urlencode({'action': 'search_nearby', 'lat': lat, 'long': long}))))
+                contextmenu.append((Common.STR(30016), 'Container.Update(%s)' % sys.argv[0]))
                 contextmenu.append((Common.STR(30015), 'Addon.OpenSettings(%s)' % Common.ADDON_ID))
                 item.addContextMenuItems(contextmenu, replaceItems=True)
                 url = '%s?%s' % (sys.argv[0], urlencode({'action': action, 'path': path}))
@@ -302,12 +303,14 @@ if __name__ == '__main__':
         # 経度（東西） 約 0.1108 度
         lat = args.get('lat')
         long = args.get('long')
+        range = int(Common.GET('search_range').replace('km', ''))
+        limit = int(Common.GET('search_limit'))
         sql = '''SELECT ZASSET.ZUUID, ZASSET.ZKIND, ZASSET.ZDIRECTORY, ZASSET.ZFILENAME, ZASSET.ZLATITUDE, ZASSET.ZLONGITUDE, STRFTIME(ZASSET.ZDATECREATED)
         FROM ZASSET
-        WHERE ABS(ZASSET.ZLATITUDE - :lat)/0.0898 < 1 AND ABS(ZASSET.ZLONGITUDE - :long)/0.1108 < 1
-        ORDER BY ABS(ZASSET.ZLATITUDE - :lat)/0.0898 + ABS(ZASSET.ZLONGITUDE - :long)/0.1108
-        LIMIT 100'''
-        cursor.execute(sql, {'lat': float(lat), 'long': float(long)})
+        WHERE ABS(ZASSET.ZLATITUDE - :lat)/0.00898 < :range AND ABS(ZASSET.ZLONGITUDE - :long)/0.01108 < :range
+        ORDER BY ABS(ZASSET.ZLATITUDE - :lat)/0.00898 + ABS(ZASSET.ZLONGITUDE - :long)/0.01108
+        LIMIT :limit'''
+        cursor.execute(sql, {'lat': float(lat), 'long': float(long), 'range': range, 'limit': limit})
         show_photos(cursor)
 
     #

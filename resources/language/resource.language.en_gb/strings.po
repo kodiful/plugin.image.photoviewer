@@ -53,11 +53,11 @@ msgid "Search photos of %s"
 msgstr ""
 
 msgctxt "#30011"
-msgid "Search photos of the place"
+msgid "Search photos around the location"
 msgstr ""
 
 msgctxt "#30014"
-msgid "Show map of the place"
+msgid "Show map around the location"
 msgstr ""
 
 msgctxt "#30015"
@@ -96,12 +96,28 @@ msgctxt "#30100"
 msgid "No items"
 msgstr ""
 
+#
+# settings
+#
+
 msgctxt "#30200"
 msgid "Settings"
 msgstr ""
 
 msgctxt "#30201"
 msgid "Path to Photos Library"
+msgstr ""
+
+msgctxt "#30202"
+msgid "Map zoom"
+msgstr ""
+
+msgctxt "#30203"
+msgid "Location search range"
+msgstr ""
+
+msgctxt "#30204"
+msgid "Location search limit"
 msgstr ""
 
 msgctxt "#30300"

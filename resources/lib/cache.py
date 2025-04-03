@@ -7,11 +7,11 @@ import subprocess
 from resources.lib.common import Common
 
 
-class Cache:
+class Cache(Common):
 
     def __init__(self):
         # キャッシュディレクトリ
-        self.cache = os.path.join(Common.PROFILE_PATH, 'cache', 'heic2jpeg')
+        self.cache = os.path.join(self.PROFILE_PATH, 'cache', 'heic2jpeg')
         # ディレクトリが無ければ作成
         os.makedirs(self.cache, exist_ok=True)
 

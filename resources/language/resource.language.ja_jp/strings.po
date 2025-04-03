@@ -53,11 +53,11 @@ msgid "Search photos of %s"
 msgstr "%sの写真を検索"
 
 msgctxt "#30011"
-msgid "Search photos of the place"
-msgstr "撮影地が近い写真を検索"
+msgid "Search photos around the location"
+msgstr "撮影地周辺の写真を検索"
 
 msgctxt "#30014"
-msgid "Show map of the place"
+msgid "Show map around the location"
 msgstr "撮影地周辺の地図を表示"
 
 msgctxt "#30015"
@@ -96,6 +96,10 @@ msgctxt "#30100"
 msgid "No items"
 msgstr "該当なし"
 
+#
+# settings
+#
+
 msgctxt "#30200"
 msgid "Settings"
 msgstr "設定"
@@ -103,6 +107,18 @@ msgstr "設定"
 msgctxt "#30201"
 msgid "Path to Photos Library"
 msgstr "写真ライブラリのパス"
+
+msgctxt "#30202"
+msgid "Map zoom"
+msgstr "地図ズーム"
+
+msgctxt "#30203"
+msgid "Location search range"
+msgstr "撮影地検索範囲"
+
+msgctxt "#30204"
+msgid "Location search limit"
+msgstr "撮影地検索数"
 
 msgctxt "#30300"
 msgid "Others"
