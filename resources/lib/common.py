@@ -16,7 +16,6 @@ class Common:
     # アドオン情報
     ADDON = xbmcaddon.Addon()
     ADDON_ID = ADDON.getAddonInfo('id')
-    ADDON_URL = 'plugin://%s' % ADDON_ID
 
     STR = ADDON.getLocalizedString
     GET = ADDON.getSetting

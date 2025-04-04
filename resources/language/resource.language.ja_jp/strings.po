@@ -16,13 +16,13 @@ msgstr ""
 "Language: ja_JP\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgctxt "#30000"
-msgid "Photos Library.photoslibrary"
-msgstr "写真ライブラリ.photoslibrary"
+#
+# top
+#
 
 msgctxt "#30001"
-msgid "Library"
-msgstr "ライブラリ"
+msgid "Date"
+msgstr "日付"
 
 msgctxt "#30002"
 msgid "Places"
@@ -48,6 +48,10 @@ msgctxt "#30007"
 msgid "Memory"
 msgstr "メモリー"
 
+#
+# context menus
+#
+
 msgctxt "#30010"
 msgid "Search photos of %s"
 msgstr "%sの写真を検索"
@@ -68,33 +72,29 @@ msgctxt "#30016"
 msgid "Return to top"
 msgstr "トップに戻る"
 
-msgctxt "#30017"
-msgid "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
-msgstr "01,02,03,04,05,06,07,08,09,10,11,12"
+#
+# zoom levels
+#
 
-msgctxt "#30018"
-msgid "Mon,Tue,Wed,Thu,Fri,Sat,Sun"
-msgstr "月,火,水,木,金,土,日"
+msgctxt "#30040"
+msgid "World"
+msgstr "世界"
 
-msgctxt "#30030"
-msgid "{day7}, {day} {month} {year} {hour}:{minute}"
-msgstr "{year}年{month}月{day}日({day7}) {hour}時{minute}分"
+msgctxt "#30041"
+msgid "Country"
+msgstr "国"
 
-msgctxt "#30031"
-msgid "{day7}, {day} {month} {year}"
-msgstr "{year}年{month}月{day}日({day7})"
+msgctxt "#30042"
+msgid "Prefecture"
+msgstr "都道府県"
 
-msgctxt "#30032"
-msgid "{month} {year}"
-msgstr "{year}年{month}月"
+msgctxt "#30043"
+msgid "Municipalities"
+msgstr "市区町村"
 
-msgctxt "#30033"
-msgid "{year}"
-msgstr "{year}年"
-
-msgctxt "#30100"
-msgid "No items"
-msgstr "該当なし"
+msgctxt "#30044"
+msgid "Street"
+msgstr "番地"
 
 #
 # settings
@@ -109,16 +109,16 @@ msgid "Path to Photos Library"
 msgstr "写真ライブラリのパス"
 
 msgctxt "#30202"
-msgid "Map zoom"
-msgstr "地図ズーム"
+msgid "Zoom"
+msgstr "ズーム"
 
 msgctxt "#30203"
 msgid "Location search range"
-msgstr "撮影地検索範囲"
+msgstr "周辺撮影地検索範囲"
 
 msgctxt "#30204"
 msgid "Location search limit"
-msgstr "撮影地検索数"
+msgstr "周辺撮影地検索上限"
 
 msgctxt "#30300"
 msgid "Others"
@@ -130,10 +130,10 @@ msgstr "デバッグ"
 
 msgctxt "#30500"
 msgid "Set path to photos library"
-msgstr ""
+msgstr "写真ライブラリのパスを設定してください"
 
 #
-# for common use
+# datetime format
 #
 
 msgctxt "#30916"

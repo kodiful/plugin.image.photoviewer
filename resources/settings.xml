@@ -9,7 +9,7 @@
   <!-- General -->
   <category label="30200">
     <setting label="30201" id="libpath" type="folder" source="" default=""/>
-    <setting label="30202" id="zoom" type="select" values="5 (country)|6|7|8|9|10 (prefecture)|11|12|13|14 (municipalities)|15|16|17|18 (street)" default="14 (municipalities)"/>
+    <setting label="30202" id="zoom" type="text" default="15" visible="false"/>
     <setting label="30203" id="search_range" type="select" values="1km|2km|5km|10km|20km|50km|100km" default="10km"/>
     <setting label="30204" id="search_limit" type="select" values="20|50|100|200|500" default="100"/>
     <setting label="30303" id="debug" type="bool" default="false"/>

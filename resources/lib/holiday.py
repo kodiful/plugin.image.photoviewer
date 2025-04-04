@@ -22,8 +22,11 @@ class Holiday(Common):
         result = self.cursor.fetchone()
         return result
 
-    def convert(self, timestamp, format):  # 2025-04-04 09:49:00
-        text = Common.datetime(timestamp).strftime(format)  # 2025年01月23日(木) 12:34
+    def convert(self, timestamp, format):
+        # timestamp: 2025-04-05 12:34:00
+        # format: %Y年%m月%d日(%a) %H:%M
+        # return: [COLOR blue]2025年04月05日(土) 12:34[/COLOR]
+        text = Common.datetime(timestamp).strftime(format)
         w = Common.weekday(timestamp)
         if w == 6 or self.is_holiday(timestamp[:10]):
             # 日曜日/祝祭日

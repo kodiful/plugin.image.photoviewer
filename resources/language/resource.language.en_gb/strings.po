@@ -16,12 +16,12 @@ msgstr ""
 "Language: en_GB\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "#30000"
-msgid "Photos Library.photoslibrary"
-msgstr ""
+#
+# top
+#
 
 msgctxt "#30001"
-msgid "Library"
+msgid "Date"
 msgstr ""
 
 msgctxt "#30002"
@@ -48,6 +48,10 @@ msgctxt "#30007"
 msgid "Memory"
 msgstr ""
 
+#
+# context menus
+#
+
 msgctxt "#30010"
 msgid "Search photos of %s"
 msgstr ""
@@ -68,32 +72,28 @@ msgctxt "#30016"
 msgid "Return to top"
 msgstr ""
 
-msgctxt "#30017"
-msgid "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
+#
+# zoom levels
+#
+
+msgctxt "#30040"
+msgid "World"
 msgstr ""
 
-msgctxt "#30018"
-msgid "Mon,Tue,Wed,Thu,Fri,Sat,Sun"
+msgctxt "#30041"
+msgid "Country"
 msgstr ""
 
-msgctxt "#30030"
-msgid "{day7}, {day} {month} {year} {hour}:{minute}"
+msgctxt "#30042"
+msgid "Prefecture"
 msgstr ""
 
-msgctxt "#30031"
-msgid "{day7}, {day} {month} {year}"
+msgctxt "#30043"
+msgid "Municipalities"
 msgstr ""
 
-msgctxt "#30032"
-msgid "{month} {year}"
-msgstr ""
-
-msgctxt "#30033"
-msgid "{year}"
-msgstr ""
-
-msgctxt "#30100"
-msgid "No items"
+msgctxt "#30044"
+msgid "Street"
 msgstr ""
 
 #
@@ -109,7 +109,7 @@ msgid "Path to Photos Library"
 msgstr ""
 
 msgctxt "#30202"
-msgid "Map zoom"
+msgid "Zoom"
 msgstr ""
 
 msgctxt "#30203"
@@ -130,10 +130,10 @@ msgstr ""
 
 msgctxt "#30500"
 msgid "Set path to photos library"
-msgstr "写真ライブラリのパスを設定してください"
+msgstr ""
 
 #
-# for common use
+# datetime format
 #
 
 msgctxt "#30916"

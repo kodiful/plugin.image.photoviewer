@@ -142,11 +142,11 @@ class App(Common):
 
     # モーメント選択＆検索
     def select_moments(self):
-        sql = '''SELECT ZTITLE, COUNT(*)
-        FROM ZMOMENT
-        WHERE ZTITLE IS NOT NULL
-        GROUP BY ZTITLE
-        ORDER BY ZAPPROXIMATELATITUDE DESC'''
+        sql = '''SELECT ZMOMENT.ZTITLE, COUNT(*)
+        FROM ZASSET JOIN ZMOMENT ON ZASSET.ZMOMENT = ZMOMENT.Z_PK
+        WHERE ZMOMENT.ZTITLE IS NOT NULL AND ZMOMENT.ZENDDATE > ZMOMENT.ZSTARTDATE
+        GROUP BY ZMOMENT.ZTITLE
+        ORDER BY ZMOMENT.ZAPPROXIMATELATITUDE DESC'''
         self.cursor.execute(sql)
         for title, count in self.cursor.fetchall():
             item = xbmcgui.ListItem(' '.join([title, self.show_count(count)]))
@@ -175,7 +175,7 @@ class App(Common):
         ORDER BY ZDATECREATED DESC'''
         self.cursor.execute(sql)
         for year, count in self.cursor.fetchall():
-            title = self.datetime(f'{year}').strftime(self.STR(30916))  # 2025年
+            title = self.datetime(f'{year}').strftime(self.STR(30916))
             item = xbmcgui.ListItem(' '.join([title, self.show_count(count)]))
             item.setArt({'icon': self.CALENDAR, 'thumb': self.CALENDAR})
             contextmenu = []
@@ -194,7 +194,7 @@ class App(Common):
         ORDER BY ZDATECREATED'''
         self.cursor.execute(sql, {'year': year})
         for month, count in self.cursor.fetchall():
-            title = self.datetime(f'{year}-{month}').strftime(self.STR(30917))  # 2025年03月
+            title = self.datetime(f'{year}-{month}').strftime(self.STR(30917))
             item = xbmcgui.ListItem(' '.join([title, self.show_count(count)]))
             item.setArt({'icon': self.CALENDAR, 'thumb': self.CALENDAR})
             contextmenu = []
@@ -267,7 +267,10 @@ class App(Common):
     # 地図表示
     def show_map(self, uuid, lat, long):
         path = Map().convert(uuid, lat, long)
-        xbmc.executebuiltin('ShowPicture(%s)' % path)
+        if path is None:
+            pass
+        else:
+            xbmc.executebuiltin('ShowPicture(%s)' % path)
 
     # 画像表示
     def show_picture(self, path):
