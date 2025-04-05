@@ -94,7 +94,7 @@ msgstr "市区町村"
 
 msgctxt "#30044"
 msgid "Street"
-msgstr "番地"
+msgstr "町/丁目"
 
 #
 # settings

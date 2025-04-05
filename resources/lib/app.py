@@ -33,7 +33,7 @@ class App(Common):
         def strftime(epochtime, format='%Y-%m-%d %H:%M:%S'):
             return datetime.fromtimestamp(epochtime + 978307200).strftime(format)
         self.conn.create_function('STRFTIME', -1, strftime)
-        # 祝祭日判定クラス初期化
+        # 祝祭日判定初期化
         self.holiday = Holiday(os.path.join(self.DATA_PATH, 'data.db'))
 
     # 検索結果表示
@@ -45,7 +45,7 @@ class App(Common):
             has_latlong = lat > -180.0 and long > -180.0
             if kind in (0, 1) and os.path.exists(img_path):
                 # タイトル
-                title = [self.holiday.convert(timestamp, self.STR(30919))]  # 2025年01月23日(木) 12:34
+                title = [self.holiday.convert(timestamp, self.STR(30919))]
                 if has_latlong:
                     title.append('[COLOR lightgreen][GPS][/COLOR]')
                 if is_video:
@@ -67,7 +67,7 @@ class App(Common):
                 item.setArt({'icon': img_path, 'thumb': img_path})
                 contextmenu = []
                 if has_latlong:
-                    contextmenu.append((self.STR(30014), 'RunPlugin(%s?%s)' % (sys.argv[0], urlencode({'action': 'show_map', 'uuid': uuid, 'lat': lat, 'long': long}))))
+                    contextmenu.append((self.STR(30014), 'Container.Update(%s?%s)' % (sys.argv[0], urlencode({'action': 'show_map', 'uuid': uuid, 'lat': lat, 'long': long}))))
                     contextmenu.append((self.STR(30011), 'Container.Update(%s?%s)' % (sys.argv[0], urlencode({'action': 'search_nearby', 'lat': lat, 'long': long}))))
                 contextmenu.append((self.STR(30016), 'Container.Update(%s)' % sys.argv[0]))
                 contextmenu.append((self.STR(30015), 'Addon.OpenSettings(%s)' % self.ADDON_ID))

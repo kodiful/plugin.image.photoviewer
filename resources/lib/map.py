@@ -24,24 +24,24 @@ class Map(Common):
     # 18 建物や道路レベル
 
     ZOOM = [
-        f'1 ({Common.STR(30040)})',
+        f'1 ({Common.STR(30040)})',  # 世界
         f'2',
         f'3',
-        f'4',
-        f'5 ({Common.STR(30041)})',
+        f'4 ({Common.STR(30041)})',  # 国
+        f'5',
         f'6',
         f'7',
-        f'8',
+        f'8 ({Common.STR(30042)})',  # 都道府県
         f'9',
-        f'10 ({Common.STR(30042)})',
+        f'10',
         f'11',
-        f'12',
+        f'12 ({Common.STR(30043)})',  # 市区町村
         f'13',
-        f'14 ({Common.STR(30043)})',
+        f'14',
         f'15',
-        f'16',
+        f'16 ({Common.STR(30044)})',  # 町名/丁目
         f'17',
-        f'18 ({Common.STR(30044)})'
+        f'18'
     ]
 
     def __init__(self):
