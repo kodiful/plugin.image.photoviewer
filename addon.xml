@@ -9,6 +9,9 @@
     <provides>image</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
     <platform>all</platform>
     <summary lang="en">Photo Viewer</summary>
     <summary lang="ja">フォトビューア</summary>
@@ -17,5 +20,6 @@
     <disclaimer lang="en">Works on macOS</disclaimer>
     <disclaimer lang="ja">macOSで動作</disclaimer>
     <website>http://kodiful.com/</website>
+    <source>https://github.com/kodiful/plugin.image.photoviewer</source>
   </extension>
 </addon>
