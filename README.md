@@ -20,7 +20,7 @@ Raspberry Pi OSにおいても、macOSの _写真ライブラリ.photoslibrary_ 
 
 ## 日付
 
-写真の撮影日の年、月、日で絞り込みます。
+撮影日を、年、月、日で絞り込みます。
 
 ![年選択](docs/images/10_日付/11_年選択.png)
 
